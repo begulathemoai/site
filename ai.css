@@ -1,0 +1,18 @@
+/* I don't understand how this works but setting the body's height to 50% of the viewport's height seems to do the trick (I'm trying to center the text vertically)*/
+body {
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    width: 100vw;
+    height: 50vh;
+    overflow: hidden;
+
+}
+
+body>div {
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
