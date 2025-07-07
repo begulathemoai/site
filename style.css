@@ -19,7 +19,7 @@ body::before {
 
 
 body {
-    background-image: url("images/shared/botw-concept-art.jpg");
+    background-image: url("https://begulathemoai.dev/images/shared/botw-concept-art.jpg");
     background-size: 0 0;
     /* Image should not be drawn here */
     width: 100%;
