@@ -1,4 +1,57 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
+    <body>
+        <div style="font-size: x-large; font-weight: bold">About</div>
+        <br />
+        <div>
+            Some fun facts about me:
+            <ul>
+                <li>I use arch btw</li>
+                <li>
+                    I don't actually know how to properly use HTML, CSS &
+                    friends
+                </li>
+            </ul>
+            <br />
+            Now listening to
+            <a
+                href="https://www.last.fm/fr/user/begulathemoai"
+                id="song"
+                title="link to last.fm account"
+                >things</a
+            >
+            on last.fm
+            <a
+                href="https://github.com/biancarosa/lastfm-last-played"
+                style="font-size: small"
+                >(thanks to biancarosa for the code)</a
+            >
+            <script type="text/javascript">
+                let user = "begulathemoai";
+                let url =
+                    "https://lastfm-last-played.biancarosa.com.br/" +
+                    user +
+                    "/latest-song";
+                let song = document.querySelector("#song");
+                fetch(url)
+                    .then(function (response) {
+                        return response.json();
+                    })
+                    .then(function (json) {
+                        if (json["track"] != undefined) {
+                            song.innerHTML =
+                                json["track"]["name"] +
+                                " - " +
+                                json["track"]["artist"]["#text"];
+                        }
+                    });
+            </script>
+            <br />
+            <a href="./index.html">Go back</a>
+        </div>
+    </body>
 </html>

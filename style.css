@@ -14,7 +14,7 @@ body::before {
     height: 110%;
     background-image: inherit;
     background-size: cover;
-    filter: blur(8px) invert();
+    filter: blur(8px) invert() brightness(0.3);
 }
 
 
